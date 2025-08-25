@@ -25,3 +25,29 @@ This work introduces SCCM, an online regression-oriented framework for automated
 The framework is distribution-agnostic, \kpi-driven, and its in-memory design enables proactive intervention before model performance degradation occurs, and employs a dynamic thresholding strategy that ensures robustness across varying \kpis and diverse data stream characteristics, ensuring a versatile and resource-efficient solution for real-time regression tasks.** 
 
 
+
+
+## Algorithm
+![SCCM Algorithm](DescriptionImages/001SCCM-Algorithm.png)
+
+## Method
+![SCCM Method 1](DescriptionImages/002-SCCM-Method.png)
+![SCCM Method 2](DescriptionImages/003-SCCM-Method.png)
+
+## Datasets
+![SCCM Datasets](DescriptionImages/004-SCCM-Datasets.png)
+
+## Experiments
+### Abrupt Drift
+![Experiment Abrupt A](DescriptionImages/005-Experiment-Abrupt-a.png)
+![Experiment Abrupt B](DescriptionImages/005-Experiment-Abrupt-b.png)
+
+### Automated Tuning vs Deep Recalibration
+![Experiment Tuning vs Recalibration](DescriptionImages/005-Experiment-AutomatedTuningVsDeepRecalibration.png)
+
+### Gradual Drift
+![Experiment Gradual](DescriptionImages/005-Experiment-Gradual.png)
+
+### Incremental Drift
+![Experiment Incremental](DescriptionImages/005-Experiment-Incremental.png)
+
