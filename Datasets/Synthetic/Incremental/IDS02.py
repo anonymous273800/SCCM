@@ -1,0 +1,45 @@
+from Datasets.Synthetic.Incremental.IncrementalGeneric import (
+    generate_incremental_dataset,
+    print_incremental_dataset_info,
+    plot_incremental_dataset
+)
+
+
+def get_IDS02(
+    n_samples_total=1000,
+    seed=42,
+    noise_std=1.5,
+    return_meta=False
+):
+    return generate_incremental_dataset(
+        dataset_id="IDS02",
+        template_id="I_L_M",
+        dimension_level="low",
+        magnitude_level="medium",
+        n_samples_total=n_samples_total,
+        n_features=1,
+        seed=seed,
+        noise_std=noise_std,
+        beta_start=3.0,
+        beta_end=1.0,
+        bias_start=5.0,
+        bias_end=8.0,
+        mu_start=0.0,
+        mu_end=1.0,
+        n_steps=10,
+        return_meta=return_meta
+    )
+
+
+def print_IDS02_info(X, y, X_steps, y_steps, meta):
+    print_incremental_dataset_info(X, y, X_steps, y_steps, meta)
+
+
+if __name__ == "__main__":
+    X, y, X_steps, y_steps, meta = get_IDS02(return_meta=True)
+    print_IDS02_info(X, y, X_steps, y_steps, meta)
+    plot_incremental_dataset(
+        X_steps,
+        y_steps,
+        title="IDS02: Incremental Drift in 1D Regression (Low, Medium)"
+    )
